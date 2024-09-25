@@ -8,8 +8,11 @@ class crud:
         self.conexion = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="",
-            database="db_academica"
+            password="123456",
+            database="db_academica",
+            charset="utf8",
+            collation = "utf8mb4_general_ci",
+            port=3306
         )
         if self.conexion.is_connected():
             print("Conectado")
