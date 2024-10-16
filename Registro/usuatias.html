@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eee;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to top, #fff 10%, rgba(93, 42, 141, 0.4) 90%) no-repeat;
+        }
+
+        .wrapper {
+            max-width: 500px;
+            border-radius: 10px;
+            margin: 50px auto;
+            padding: 30px 40px;
+            box-shadow: 20px 20px 80px rgb(206, 206, 206);
+            background: white;
+        }
+
+        .h2 {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #eb50af;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .h4 {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        .input-field {
+            border-radius: 5px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid #eb50af;
+            color: #eb50af;
+            margin-bottom: 15px;
+        }
+
+        .input-field:hover {
+            color: #db377b;
+            border: 1px solid #db377b;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            width: 100%;
+            padding: 0px 2px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn.btn-block {
+            border-radius: 20px;
+            background-color: #eb50af;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn.btn-block:hover {
+            background-color: #db377b;
+        }
+
+        @media (max-width: 575px) {
+            .wrapper {
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 424px) {
+            .wrapper {
+                padding: 30px 10px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="h2">Registro</div>
+        <div class="h4 text-muted">Ingresa tus datos</div>
+        <form action="/register" method="post" class="pt-3">
+            <div class="form-group py-2">
+                <div class="input-field">
+                    <input type="text" name="username" placeholder="Nombre de usuario" required>
+                </div>
+            </div>
+            <div class="form-group py-1 pb-2">
+                <div class="input-field">
+                    <input type="password" name="password" placeholder="Clave" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-block">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
